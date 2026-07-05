@@ -1,0 +1,17 @@
+.social-icons svg {
+    width:  1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-icons svg:hover {
+    transform: scale(1.2);
+
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    justify-items: center;
+}

@@ -1,0 +1,43 @@
+.app-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.yo-image img{
+    width: 260px;
+    height: 260px;
+    border-radius: 30%;
+    aspect-ratio: cover;
+    background: #ffff;
+    border-style: solid;
+    border-color: rgb(183, 112, 244);
+    opacity: 95%;
+    box-shadow: 0 8px 20px #b700ff;
+}
+
+.yo-image{
+  margin-top: 12px;
+}
+
+.name {
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 2px #00000065;
+  font-family: "Press Start 2P";
+  letter-spacing: 0.5rem;
+}
+
+nav h2 a {
+  text-decoration: none;
+  color: inherit;
+}
