@@ -1,4 +1,4 @@
-    header {
+header {
     position: sticky;
     top: 0;
     z-index: 999;
@@ -9,7 +9,7 @@
 
     box-shadow: 0 8px 30px #b700ff;
 
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 nav {
@@ -24,7 +24,10 @@ nav h2 {
     margin: 0;
     font-size: 20px;
     transition: transform 0.3s;
+    font-family: inherit;
+    align-items: center;
 }
+
 
 nav h2:hover {
     color: #b700ff;
@@ -39,14 +42,20 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 24px;
+    align-items: center;
 }
 
-nav li {
-    display: inline;
-    cursor: pointer;
+nav li a {
+  color: #aa3bff;
+  font-family: var(--sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: inline-block;
 }
 
-nav li:hover {
-    color: #b700ff;
-    text-shadow: 0 0 15px #b700ff
+nav li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #b700ff;
+    transform: scale(1.2)    
 }

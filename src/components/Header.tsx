@@ -10,7 +10,6 @@ function Header ({}: HeaderProps){
         <header>
                 <nav>
                 <h2> <Link to="/">YEIGEN</Link></h2>
-
                 <ul>
                     <li> <Link to="/">Inicio</Link></li>
                     <li> <Link to="/proyectos">Proyectos</Link></li>

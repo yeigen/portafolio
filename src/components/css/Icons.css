@@ -2,6 +2,8 @@
     width:  1.5rem;
     height: 1.5rem;
     transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons svg:hover {

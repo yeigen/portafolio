@@ -8,7 +8,7 @@ function Home() {
         <div className="hero">
     </div>
         <div>
-            <h1>PORTAFOLIO</h1>
+            <h1 className="title">PORTAFOLIO</h1>
             <p>Ya tenia uno con Astro pero me dio por hacer uno con React</p>
         <div className='yo-image'>
             <img src={yoImage} alt="yo" />
