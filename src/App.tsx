@@ -1,33 +1,20 @@
 import './App.css'
-import yoImage from './assets/yo_xd.png'
 import Header from './components/Header'
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/Home'
+import Proyectos from './pages/Proyectos'
+import Contacto from './pages/Contacto'
 
 function App() {
 
   return (
     <div className='app-main'>
-      <Header /> 
-      <section id="center">
-        <div className="hero">
-        </div>
-        <div>
-          <h1>PORTAFOLIO</h1>
-          <p>
-            Ya tenia uno con Astro pero me dio por hacer uno con React
-          </p>
-          <div className='yo-image'>
-          <img src={yoImage} alt="yo" />
-          </div>
-          <p className='name'>YEIGEN</p>
-        </div>
-      </section>
-
-      <section id="next-steps">
-        <div id="docs">
-        </div>
-      </section>
-
-      <section id="spacer"></section>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
     </div>
   )
 }

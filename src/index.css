@@ -109,3 +109,7 @@ p {
   text-shadow: 0 0 8px #08060d;
   margin: 0 auto;
 }
+
+a{
+  text-decoration: none;
+}
