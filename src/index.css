@@ -108,3 +108,18 @@ p {
   margin: 0 auto;
   font-family: var(--sans);
 }
+
+figcaption {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 10px;
+  transition: 1s;
+  text-align: center;
+}
+
+figcaption:hover{
+  transform: scale(1.2);
+  color: #7300ff;
+
+}
