@@ -11,7 +11,7 @@ function App() {
         <div className="hero">
         </div>
         <div>
-          <h1>PORTAFOLIO</h1>
+          <h1 className='portafolio-text'>PORTAFOLIO</h1>
           <p>
             Ya tenia uno con Astro pero me dio por hacer uno con React
           </p>

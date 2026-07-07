@@ -26,3 +26,6 @@ dist-ssr
 # agents
 AGENTS.md
 docs
+
+#imagenes
+/images

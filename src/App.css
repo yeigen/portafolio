@@ -4,6 +4,33 @@
   flex: 1;
 }
 
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes amen {
+    from {}
+
+    to {transform: scale(0.9);}
+}
+
+
+
+.portafolio-text {
+  background-image: linear-gradient(to left, #7b00ff, #ba23d5, #ddabf7, #a748e3, #daacf0);
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  background-size: 200%;
+  color: transparent;    
+  background-clip: text;
+  animation: color 3s linear infinite alternate;
+}
+
 #center {
     flex: 1;
     display: flex;
@@ -23,6 +50,8 @@
     border-color: rgb(183, 112, 244);
     opacity: 95%;
     box-shadow: 0 8px 20px #b700ff;
+    animation: amen 1s ease-in-out alternate;
+    animation-iteration-count: infinite
 }
 
 .yo-image{
