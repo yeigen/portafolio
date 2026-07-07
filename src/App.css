@@ -4,31 +4,32 @@
   flex: 1;
 }
 
-@keyframes color {
-    from {
-        background-position: 0% 50%;
-    }
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
-    to {
-        background-position: 100% 50%;
-    }
+.title {
+  background: linear-gradient(170deg, #b700ff, #fff, #5c0994, #cc00dfa6);
+  background-color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  -webkit-text-fill-color: transparent;
+  animation: ola-color 1s ease-in-out infinite alternate;
+  font-size: clamp(2rem, 4vw, 4rem);
+
+}
+
+@keyframes  ola-color {
+  to {background-position: 0% 50%;}
+  from {background-position: 100% 50%;}
 }
 
 @keyframes amen {
     from {}
 
     to {transform: scale(0.9);}
-}
-
-
-
-.portafolio-text {
-  background-image: linear-gradient(to left, #7b00ff, #ba23d5, #ddabf7, #a748e3, #daacf0);
-  font-size: clamp(1.5rem, 4vw, 4rem);
-  background-size: 200%;
-  color: transparent;    
-  background-clip: text;
-  animation: color 3s linear infinite alternate;
 }
 
 #center {
@@ -56,10 +57,11 @@
 
 .yo-image{
   margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 .name {
-  margin-top: 10px;
+  margin-top: 20px;
   color: rgb(255, 255, 255);
   text-shadow: 0 2px 2px #00000065;
   font-family: "Press Start 2P";
@@ -67,6 +69,7 @@
 }
 
 nav h2 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Press Start 2P";
 }
