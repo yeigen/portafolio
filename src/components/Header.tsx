@@ -12,7 +12,7 @@ function Header ({}: HeaderProps){
                 <h2> <Link to="/">YEIGEN</Link></h2>
                 <ul>
                     <li> <Link to="/">Inicio</Link></li>
-                    <li> <Link to="/proyectos">Proyectos</Link></li>
+                    <li> <Link to="/experiencia">Experiencia</Link></li>
                     <li> <Link to="/contacto">Contacto</Link></li>
                     <li> <Icons /></li>
                 </ul>

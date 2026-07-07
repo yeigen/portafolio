@@ -73,3 +73,20 @@ nav h2 a {
     color: inherit;
     font-family: "Press Start 2P";
 }
+
+.xp-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.xp-img img{
+    margin-top: 20px;
+    box-shadow: 0 4px 8px #b700ff;
+    animation: amen 1s ease-in-out alternate;
+    animation-iteration-count: infinite;
+    width: 200px;
+    height: 200px;
+}
