@@ -1,21 +1,12 @@
 import './App.css'
-import Header from './components/Header'
-import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home'
-import XP from './pages/XP'
-import Contacto from './pages/Contacto'
+import Layout from './components/Layout'
 
 function App() {
 
   return (
-    <div className='app-main'>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="experiencia" element={<XP />} />
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
-    </div>
+    <>
+      <Layout/>
+    </>
   )
 }
 

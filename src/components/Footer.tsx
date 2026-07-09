@@ -1,21 +1,19 @@
 import './css/Header.css'
 import Icons from './Icons';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Header() {
+function Fotter() {
     return (
-        <header>
-            <nav>
-                <h2 className='Yeigen'> <Link to="/">YEIGEN</Link></h2>
+        <header className='fotter'>
+            <h2>YEIGEN</h2>
                 <ul>
                     <li> <Link to="/">Inicio</Link></li>
                     <li> <Link to="/experiencia">Experiencia</Link></li>
                     <li> <Link to="/contacto">Contacto</Link></li>
-                    <li> <Icons /></li>
                 </ul>
-            </nav>
+            <Icons/>
         </header>
     );
 }
 
-export default Header;
+export default Fotter;

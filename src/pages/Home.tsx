@@ -3,10 +3,7 @@ import yoImage from '../assets/yo_xd.png'
 function Home() {
 
   return (
-    <div className="home">
-        <section id="center">
-        <div className="hero">
-    </div>
+    <div className="center">
         <div>
             <h1 className="title">PORTAFOLIO</h1>
             <p>Ya tenia uno con Astro pero me dio por hacer uno con React</p>
@@ -15,17 +12,6 @@ function Home() {
         </div>
             <p className='name'>YEIGEN</p>
         </div>
-        
-        </section>
-        
-        <section id="next-steps">
-            <div id="docs">
-            </div>
-        </section>
-
-        <section id="spacer">
-        </section>
-    
     </div>   
   )
 }
