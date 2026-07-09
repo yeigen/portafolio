@@ -2,6 +2,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
+    align-items: center;
 
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(12px);
@@ -11,8 +12,6 @@ header {
 
     padding: 10px 10px;
 }
-
-
 
 nav {
     display: flex;

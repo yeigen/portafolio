@@ -9,15 +9,11 @@
 
 }
 
-@keyframes  ola-color {
-  to {background-position: 0% 50%;}
-  from {background-position: 100% 50%;}
-}
-
-@keyframes amen {
-    from {}
-
-    to {transform: scale(0.9);}
+.center{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .yo-image img{
@@ -26,7 +22,6 @@
     border-radius: 30%;
     aspect-ratio: cover;
     background: #ffff;
-    border-style: solid;
     border-color: rgb(183, 112, 244);
     opacity: 95%;
     box-shadow: 0 8px 20px #b700ff;
@@ -46,6 +41,11 @@
   font-family: "Press Start 2P";
   letter-spacing: 0.5rem;
 }
+
+a {
+  font-family: var(--sans);
+}
+
 
 nav h2 a {
     text-decoration: none;
@@ -81,7 +81,59 @@ nav h2 a {
 
 }
 
+.tren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px #ffffff;
+  min-height: 70px;
+  overflow: hidden;
+}
+
+.tren-track{
+  display: flex;
+  width: max-content;
+  gap: 15px;
+  animation: tren-scroll 4s linear infinite;
+}
+
+main{
+  flex: 1;
+}
+
+.fotter
+{
+  display: flex;
+  margin: 0;
+  margin-top: 15px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes  ola-color {
+  to {background-position: 0% 50%;}
+  from {background-position: 100% 50%;}
+}
+
+@keyframes amen {
+    from {}
+
+    to {transform: scale(0.9);}
+}
+
+@keyframes tren-scroll {
+  from {transform: translateX(100vw);}
+  to {transform: translateX(-100vw);}
+}
+
+
 @media (max-width: 600px) {
+  header nav, li{
+    justify-content: space-between;
+    text-align: center;
+  }
+
   .xp-img {
     flex-direction: column;
   }
@@ -93,17 +145,4 @@ nav h2 a {
   .xp-item figcaption {
     max-width: 260px;
   }
-}
-
-main{
-  flex: 1;
-}
-
-.fotter
-{
-  display: flex;
-  margin: 0;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
 }

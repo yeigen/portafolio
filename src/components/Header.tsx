@@ -11,8 +11,8 @@ function Header() {
                     <li> <Link to="/">Inicio</Link></li>
                     <li> <Link to="/experiencia">Experiencia</Link></li>
                     <li> <Link to="/contacto">Contacto</Link></li>
-                    <li> <Icons /></li>
                 </ul>
+                <li> <Icons /></li>
             </nav>
         </header>
     );

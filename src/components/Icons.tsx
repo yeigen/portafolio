@@ -18,7 +18,9 @@ function Icons() {
 							xmlns="http://www.w3.org/2000/svg"
 						>
 						<g transform={icons[key].transform}>
-							<path d={icons[key].path} />
+							{icons[key].paths.map((p, i) => (
+								<path key={i} d={p.d} fill={p.fill} />
+							))}
 						</g>
 						</svg>
 					</a>
