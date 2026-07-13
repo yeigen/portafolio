@@ -1,28 +1,34 @@
 import Abodi from '../assets/experiencia/abodi.png'
 import logo from '../assets/experiencia/logo-uao.png'
 import Indigo from '../assets/experiencia/indigo-logo.jpeg'
+import Modal from '../components/Modal';
+
+import { useState } from 'react';
 
 function Proyectos() {
+  const [isOpen, setIsOpen] = useState(false)
+  
   return (
     <div>
       <h1 className="title">EXPERIENCIA</h1>
       <div className='xp-img'>
         <figure className='xp-item'>
-          <a href="https://abodiapp.com"><img src={Abodi} alt="Abodi-Proyecto"/></a>
+            <img src={Abodi} alt="Abodi-Proyecto" onClick={() => setIsOpen(true)}/>
           <figcaption>Proyecto ABODI</figcaption>
         </figure>
 
         <figure className='xp-item'>
-          <a href="https://drive.google.com/file/d/1bdwi5OxVEL2LPY-2pmwOSpAiRUuXpqmV/view?usp=drive_link"><img src={logo} alt="Indigo"/></a>
+          <img src={logo} alt="Indigo" onClick={() => setIsOpen(true)}/>
           <figcaption>Monitor de Redes e Infraestructura</figcaption>
       </figure>
 
       <figure className='xp-item'>
-        <a href="https://indigo.tech/"><img src={Indigo} alt="Indigo"/></a>
+        <img src={Indigo} alt="Indigo" onClick={() => setIsOpen(true)}/>
         <figcaption>Junior Developer L1</figcaption>
       </figure>
         
       </div>
+      {isOpen && <Modal onClose={() => setIsOpen(false)} />}
     </div>
   )
 }

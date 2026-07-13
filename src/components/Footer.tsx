@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Fotter() {
     return (
         <header className='fotter'>
-            <h2>YEIGEN</h2>
+            <h2 className='Yeigen'> <Link to="/">YEIGEN</Link></h2>
                 <ul>
                     <li> <Link to="/">Inicio</Link></li>
                     <li> <Link to="/experiencia">Experiencia</Link></li>

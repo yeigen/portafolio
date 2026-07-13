@@ -34,6 +34,27 @@
   margin-bottom: 10px;
 }
 
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgb(0,0,0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-box{
+  width: clamp(400px, 40vw, 500px);
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-style: solid;
+  border: #b700ff;
+  box-shadow: 0 8px 12px #b700ff;
+  border-radius: 10%;
+
+}
+
 .name {
   margin-top: 20px;
   color: rgb(255, 255, 255);
