@@ -6,7 +6,7 @@ function Fotter() {
     return (
         <header className='fotter'>
             <h2 className='Yeigen'> <Link to="/">YEIGEN</Link></h2>
-                <ul>
+                <ul className="nav-links">
                     <li> <Link to="/">Inicio</Link></li>
                     <li> <Link to="/experiencia">Experiencia</Link></li>
                     <li> <Link to="/contacto">Contacto</Link></li>

@@ -18,7 +18,7 @@ function Header() {
 
                 </button>
                 <div id="main-nav-menu" className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
-                    <ul>
+                    <ul className="nav-links">
                         <li> <Link to="/">Inicio</Link></li>
                         <li> <Link to="/experiencia">Experiencia</Link></li>
                         <li> <Link to="/contacto">Contacto</Link></li>

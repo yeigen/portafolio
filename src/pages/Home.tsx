@@ -1,4 +1,6 @@
 import yoImage from '../assets/yo_xd.png'
+import Contacto from './Contacto'
+import Proyectos from './XP'
 
 function Home() {
 
@@ -12,6 +14,8 @@ function Home() {
         </div>
             <p className='name'>YEIGEN</p>
         </div>
+        <Proyectos/>
+        <Contacto/>
     </div>   
   )
 }
