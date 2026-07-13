@@ -14,11 +14,8 @@ function Header() {
                 aria-controls="main-nav-menu"
                 aria-label='Menú'
                 onClick={() => setIsMenuOpen(prev => !prev)}>
-                    
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                
+                    <span>Menu</span>
+
                 </button>
                 <div id="main-nav-menu" className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
                     <ul>
