@@ -6,7 +6,7 @@ function Home() {
     <div>
         <div>
             <h1 className="title">PORTAFOLIO</h1>
-            <p>Ya tenia uno con Astro pero me dio por hacer uno con React</p>
+            <p>Ya tenia uno con <a href="https://effortless-raindrop-add9e4.netlify.app/">Astro</a> pero me dio por hacer uno con React</p>
         <div className='yo-image'>
             <img src={yoImage} alt="yo" />
         </div>

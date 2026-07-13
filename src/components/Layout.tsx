@@ -13,7 +13,7 @@ function Layout() {
       <main className='center'>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="experiencia" element={<XP />} />
+          <Route path="/experiencia" element={<XP />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
