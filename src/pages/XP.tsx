@@ -9,6 +9,7 @@ function Proyectos() {
   const [isOpen, setIsOpen] = useState(false)
   
   return (
+    <section id='experiencia'>
     <div>
       <h1 className="title">EXPERIENCIA</h1>
       <div className='xp-img'>
@@ -30,6 +31,7 @@ function Proyectos() {
       </div>
       {isOpen && <Modal onClose={() => setIsOpen(false)} />}
     </div>
+    </section>
   )
 }
 

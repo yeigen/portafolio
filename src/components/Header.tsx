@@ -1,6 +1,5 @@
 import './css/Header.css'
 import Icons from './Icons';
-import {Link} from 'react-router-dom';
 import { useState } from 'react';
 
 function Header() {
@@ -8,7 +7,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <h2 className='Yeigen'> <Link to="/">YEIGEN</Link></h2>
+                <h2 className='Yeigen'> <a href="/">YEIGEN</a></h2>
                 <button className='hamburger'
                 aria-expanded={isMenuOpen}
                 aria-controls="main-nav-menu"
@@ -19,9 +18,9 @@ function Header() {
                 </button>
                 <div id="main-nav-menu" className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
                     <ul className="nav-links">
-                        <li> <Link to="/">Inicio</Link></li>
-                        <li> <Link to="/experiencia">Experiencia</Link></li>
-                        <li> <Link to="/contacto">Contacto</Link></li>
+                        <li> <a href="/">Inicio</a></li>
+                        <li> <a href="#experiencia">Experiencia</a></li>
+                        <li> <a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <li> <Icons /></li>

@@ -1,15 +1,14 @@
 import './css/Header.css'
 import Icons from './Icons';
-import { Link } from 'react-router-dom';
 
 function Fotter() {
     return (
         <header className='fotter'>
-            <h2 className='Yeigen'> <Link to="/">YEIGEN</Link></h2>
+            <h2 className='Yeigen'> <a href="/">YEIGEN</a></h2>
                 <ul className="nav-links">
-                    <li> <Link to="/">Inicio</Link></li>
-                    <li> <Link to="/experiencia">Experiencia</Link></li>
-                    <li> <Link to="/contacto">Contacto</Link></li>
+                    <li> <a href="/">Inicio</a></li>
+                    <li> <a href="#experiencia">Experiencia</a></li>
+                    <li> <a href="#contacto">Contacto</a></li>
                 </ul>
             <Icons/>
         </header>
