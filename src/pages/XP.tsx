@@ -9,7 +9,7 @@ function Proyectos() {
   const [isOpen, setIsOpen] = useState(false)
   
   return (
-    <section id='experiencia'>
+    <section id='experiencia' className="full-section">
     <div>
       <h1 className="title">EXPERIENCIA</h1>
       <div className='xp-img'>

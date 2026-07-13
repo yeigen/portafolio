@@ -16,6 +16,14 @@
   flex-direction: column;
 }
 
+.full-section {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .yo-image img{
     width: 260px;
     height: 260px;
