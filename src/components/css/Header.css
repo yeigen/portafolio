@@ -62,10 +62,58 @@ nav li a:hover {
     transform: scale(1.2);
 }
 
-@media screen and (max-width: 500px) {
-  nav ul {
-    float: none;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 28px;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
     display: block;
-    text-align: left;
+    height: 3px;
+    background: #aa3bff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(12.5px) rotate(45deg);
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-12.5px) rotate(-45deg);
+}
+
+@media screen and (max-width: 500px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .nav-menu.open {
+    grid-template-rows: 1fr;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    overflow: hidden;
   }
 }

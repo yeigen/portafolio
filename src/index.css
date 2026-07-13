@@ -97,6 +97,11 @@ h1 {
 h2 {
   font-size: 24px;
   line-height: 118%;
+  box-shadow: 0 4px 4px #541edf;
+  border-radius: 50%;
+  text-shadow: 0 1px 1px #000000;
+  padding: 10px;
+  font-family: var(--sans);
 }
 
 p {

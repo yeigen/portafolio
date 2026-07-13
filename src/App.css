@@ -89,6 +89,7 @@ nav h2 a {
     animation-iteration-count: infinite;
     width: clamp(90px, 25vw, 200px);
     aspect-ratio: 1 / 1;
+    cursor: pointer;
 }
 
 .xp-item{
