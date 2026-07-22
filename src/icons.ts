@@ -1,16 +1,23 @@
+import abodiLogo from './assets/abodi-logo.png'
 interface IconPath {
     d: string
     fill?: string
 }
 
 interface IconData {
-    viewBox: string
+    viewBox?: string
     transform?: string
     fill?: string
     paths: IconPath[]
 }
 
-export const icons: Record<string, IconData> = {
+interface iconImage {
+    url:  string
+}
+
+type IconEntry = IconData | iconImage
+
+export const icons: Record<string, IconEntry> = {
     github: {
         viewBox: "0 -0.5 25 25",
         fill: "#9D00FF",
@@ -117,5 +124,7 @@ export const icons: Record<string, IconData> = {
             { d: "M64.35 125.35h-.7V64.845l-42.784 42.783-.495-.495.248-.247L63.155 64.35H2.65v-.7h60.505L20.372 20.866l.495-.495L63.65 63.155V2.65h.7v60.505l42.784-42.783.495.495-.248.248L64.845 63.65h60.505v.7H64.845l42.783 42.784-.495.495-.247-.248L64.35 64.845v60.505z" },
         ],
     },
-
+    abodi: {
+        url: abodiLogo
+    }
 }

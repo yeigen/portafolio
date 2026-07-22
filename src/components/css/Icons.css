@@ -1,7 +1,8 @@
 
-.social-icons svg {
-    width:  1.2rem;
-    height: 1.2rem;
+.social-icons svg,
+.social-icons img {
+    width:  1.5rem;
+    height: 1.5rem;
     transition: transform 0.3s;
     vertical-align: middle;
 }
@@ -12,7 +13,8 @@
 }
 
 .tech-icons svg:hover,
-.social-icons svg:hover {
+.social-icons svg:hover,
+.social-icons img:hover {
     transform: scale(1.2);
 
 }
