@@ -54,14 +54,15 @@
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
+  background-color: rgba(0,0,0, 50%);
 }
 
 
 #root::before{
-  background-image: url("https://images.unsplash.com/photo-1542875272-2037d53b5e4d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://wallpaper.forfun.com/fetch/1b/1beb74db53e8982f9004d757d1bf7f85.jpeg");
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   z-index: -1;
   content: '';
@@ -81,6 +82,9 @@ h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+  border: solid;
+  border-radius: 50%;
+  text-shadow: 0 4px 4px #ffffff;
 }
 
 h1 {
@@ -100,7 +104,6 @@ h2 {
   border-radius: 50%;
   text-shadow: 0 1px 1px #000000;
   padding: 10px;
-  font-family: var(--sans);
 }
 
 p {

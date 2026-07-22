@@ -25,8 +25,8 @@
 }
 
 .yo-image img{
-    width: 260px;
-    height: 260px;
+    width: 560px;
+    height: 360px;
     border-radius: 30%;
     aspect-ratio: cover;
     background: #ffff;
@@ -53,14 +53,25 @@
 }
 
 .modal-box{
-  width: clamp(400px, 40vw, 500px);
+  width: clamp(720px, 40vw, 400px);
   aspect-ratio: 1 / 1;
-  background: #fff;
-  border-style: solid;
-  border: #b700ff;
-  box-shadow: 0 8px 12px #b700ff;
+  position: relative;
+  overflow: hidden;
   border-radius: 10%;
+  image-rendering: pixelated;
 
+}
+
+.modal-box::before{
+  content: '';
+  position: absolute;
+  inset: -6px;
+  background-image: url("https://i.redd.it/wc6d3yqxt2981.jpg");
+  background-size: 920px ;
+  background-position: center;
+  z-index: -1;
+  border-style: solid;
+  filter: blur(2px);
 }
 
 .name {

@@ -5,8 +5,8 @@ header {
     align-items: center;
 
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     box-shadow: 0 8px 30px #b700ff;
 
