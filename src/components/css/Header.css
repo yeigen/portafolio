@@ -10,7 +10,7 @@ header {
 
     box-shadow: 0 8px 30px #b700ff;
 
-    padding: 10px 10px;
+    padding: 12px;
 }
 
 nav {
@@ -21,9 +21,13 @@ nav {
     margin: 0 auto;
 }
 
+nav li{
+    font-size: 20px;
+}
+
 .Yeigen {
     margin: 0;
-    font-size: 20px;
+    font-size: 30px;
     transition: transform 0.3s;
 }
 
@@ -102,7 +106,6 @@ nav .nav-links {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
-    padding: px;
   }
 
   .nav-menu.open {
