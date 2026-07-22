@@ -111,6 +111,7 @@ p {
   text-shadow: 0 0 8px #08060d;
   margin: 0 auto;
   font-family: var(--sans);
+  font-size: 20px;
 }
 
 figcaption {
