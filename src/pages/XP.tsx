@@ -18,7 +18,12 @@ function Proyectos() {
         </figure>
         ))}
       </div>
-      {seleccion && <Modal titulo={seleccion.titulo} texto={seleccion.texto} onClose={() => setSeleccion(null)} />}
+      {seleccion && <Modal 
+        titulo={seleccion.titulo} 
+        texto={seleccion.texto} 
+        fondo={seleccion.fondo} 
+        onClose={() => setSeleccion(null)} 
+      />}
       </div>
     </section>
   )

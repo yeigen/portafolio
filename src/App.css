@@ -67,7 +67,7 @@
   content: '';
   position: absolute;
   inset: -6px;
-  background-image: url("https://i.redd.it/wc6d3yqxt2981.jpg");
+  background-image: var(--modal-img);;
   background-size: 920px ;
   background-position: center;
   z-index: -1;
@@ -112,6 +112,7 @@ a {
     width: clamp(90px, 25vw, 200px);
     aspect-ratio: 1 / 1;
     cursor: pointer;
+    
 }
 
 .xp-item{
