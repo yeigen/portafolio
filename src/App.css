@@ -11,7 +11,7 @@
 
 }
 
-.center{
+.center {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -26,35 +26,35 @@
   align-items: center;
 }
 
-.yo-image img{
-    width: 720px;
-    height: 380px;
-    border-radius: 30%;
-    background: #ffff;
-    border-color: rgb(183, 112, 244);
-    opacity: 95%;
-    box-shadow: 0 8px 20px #b700ff;
-    animation: amen 1s ease-in-out alternate;
-    animation-iteration-count: infinite
+.yo-image img {
+  width: 720px;
+  height: 380px;
+  border-radius: 30%;
+  background: #ffff;
+  border-color: rgb(183, 112, 244);
+  opacity: 95%;
+  box-shadow: 0 8px 20px #b700ff;
+  animation: amen 1s ease-in-out alternate;
+  animation-iteration-count: infinite
 }
 
-.yo-image{
+.yo-image {
   margin-top: 12px;
   margin-bottom: 10px;
 }
 
-.modal-overlay{
+.modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgb(0,0,0, 0.7);
+  background: rgb(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
 }
 
-.modal-box{
-  width: clamp(420px, 40vw, 720px);
+.modal-box {
+  width: var(--modal-w);
   aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
@@ -63,16 +63,93 @@
 
 }
 
-.modal-box::before{
+.modal-box::before {
   content: '';
   position: absolute;
   inset: -6px;
-  background-image: var(--modal-img);;
-  background-size: 920px ;
+  background-image: var(--modal-img);
+  ;
+  background-size: 920px;
   background-position: center;
   z-index: -1;
   border-style: solid;
   filter: blur(2px);
+}
+
+.modal-stage {
+  --modal-w: clamp(420px, 40vw, 720px);
+  --gap-foto: 3rem;
+  position: relative;
+}
+
+.modal-foto {
+  --x-final: calc(50% + var(--gap-foto) + var(--modal-w) / 2);
+  position: absolute;
+  right: 100%;
+  margin-right: var(--gap-foto);
+  top: 50%;
+  border-radius: 30%;
+  transform: translateY(-50%);
+  width: clamp(260px, 22vw, 480px);
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
+}
+
+.modal-foto-derecha {
+  --x-final: calc(-50% - var(--gap-foto) - var(--modal-w) / 2);
+  position: absolute;
+  left: 100%;
+  margin-left: var(--gap-foto);
+  top: 50%;
+  border-radius: 30%;
+  transform: translateY(-50%);
+  width: clamp(260px, 22vw, 480px);
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes unirse {
+  0% {
+    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+
+  55% {
+    transform: translate(var(--x-final), -50%) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+
+  65% {
+    transform: translate(var(--x-final), -50%) scale(0.75);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate(var(--x-final), -50%) scale(2.8);
+    opacity: 0;
+  }
+}
+
+.modal-foto,
+.modal-foto-derecha {
+  z-index: 1;
+  animation: unirse 1500ms linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .modal-foto,
+  .modal-foto-derecha {
+    display: none;
+  }
+}
+
+.modal-texto {
+  white-space: pre-line;
+  text-shadow: 0 3px 3px #000000;
+  font-size: 28px;
+  color: #ffffff;
 }
 
 .name {
@@ -91,12 +168,12 @@ a {
 
 
 .Yeigen a {
-    text-decoration: none;
-    color: inherit;
-    font-family: "Press Start 2P";
+  text-decoration: none;
+  color: inherit;
+  font-family: "Press Start 2P";
 }
 
-.xp-img{
+.xp-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,24 +181,24 @@ a {
 
 }
 
-.xp-img img{
-    margin-top: 20px;
-    box-shadow: 0 4px 8px #b700ff;
-    animation: amen 1s ease-in-out alternate;
-    animation-iteration-count: infinite;
-    width: clamp(90px, 25vw, 200px);
-    aspect-ratio: 1 / 1;
-    cursor: pointer;
-    
+.xp-img img {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px #b700ff;
+  animation: amen 1s ease-in-out alternate;
+  animation-iteration-count: infinite;
+  width: clamp(90px, 25vw, 200px);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+
 }
 
-.xp-item{
+.xp-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.xp-item figcaption{
+.xp-item figcaption {
   max-width: 200px;
 
 }
@@ -135,19 +212,18 @@ a {
   overflow: hidden;
 }
 
-.tren-track{
+.tren-track {
   display: flex;
   width: max-content;
   gap: 15px;
   animation: tren-scroll 4s linear infinite;
 }
 
-main{
+main {
   flex: 1;
 }
 
-.fotter
-{
+.fotter {
   display: flex;
   margin: 0;
   margin-top: 2px;
@@ -156,25 +232,39 @@ main{
   align-items: center;
 }
 
-@keyframes  ola-color {
-  to {background-position: 0% 50%;}
-  from {background-position: 100% 50%;}
+@keyframes ola-color {
+  to {
+    background-position: 0% 50%;
+  }
+
+  from {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes amen {
-    from {}
+  from {}
 
-    to {transform: scale(0.9);}
+  to {
+    transform: scale(0.9);
+  }
 }
 
 @keyframes tren-scroll {
-  from {transform: translateX(100vw);}
-  to {transform: translateX(-100vw);}
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
 }
 
 
 @media (max-width: 600px) {
-  header nav, li{
+
+  header nav,
+  li {
     justify-content: space-between;
     text-align: center;
   }

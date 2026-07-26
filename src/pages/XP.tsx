@@ -21,7 +21,8 @@ function Proyectos() {
       {seleccion && <Modal 
         titulo={seleccion.titulo} 
         texto={seleccion.texto} 
-        fondo={seleccion.fondo} 
+        fondo={seleccion.fondo}
+        foto={seleccion.foto} 
         onClose={() => setSeleccion(null)} 
       />}
       </div>
