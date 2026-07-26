@@ -1,4 +1,4 @@
-import yoImage from '../assets/yo-pixel-art.png'
+import yoImage from '../assets/yo-pixel-art.jpg'
 import Contacto from './Contacto'
 import Proyectos from './XP'
 

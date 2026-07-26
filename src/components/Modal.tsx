@@ -19,7 +19,9 @@ function Modal({ onClose, titulo, texto, fondo, foto }: ModalProps) {
         {foto && <img className="modal-foto-derecha" src={foto} alt={titulo} />}
         <div className="modal-box" style={{ '--modal-img': `url("${fondo}")` } as React.CSSProperties}>
           <h2>{titulo}</h2>
-          <p className="modal-texto">{textoVisible}</p>
+          {textoVisible.split(/\n\s*\n/).map((parrafo, i) => (
+            <p className="modal-texto" key={i}>{parrafo}</p>
+          ))}
         </div>
       </div>
     </div>

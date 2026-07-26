@@ -146,7 +146,7 @@
 }
 
 .modal-texto {
-  white-space: pre-line;
+  margin: 0 0 1em;
   text-shadow: 0 3px 3px #000000;
   font-size: 28px;
   color: #ffffff;
