@@ -22,12 +22,12 @@ nav {
 }
 
 nav li{
-    font-size: 20px;
+    font-size: clamp(1rem, 0.92rem + 0.37vw, 1.25rem);
 }
 
 .Yeigen {
     margin: 0;
-    font-size: 30px;
+    font-size: clamp(1.125rem, 0.875rem + 1.11vw, 1.875rem);
     transition: transform 0.3s;
 }
 

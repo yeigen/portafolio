@@ -88,17 +88,16 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: clamp(2rem, 1.5rem + 2.22vw, 3.5rem);
   letter-spacing: -1.68px;
   margin: 32px 0;
 
   @media (max-width: 1024px) {
-    font-size: 36px;
     margin: 20px 0;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
   line-height: 118%;
   box-shadow: 0 4px 4px #541edf;
   border-radius: 50%;
@@ -111,12 +110,14 @@ p {
   text-shadow: 0 0 8px #08060d;
   margin: 0 auto;
   font-family: var(--sans);
-  font-size: 20px;
+  font-size: clamp(1rem, 0.92rem + 0.37vw, 1.25rem);
+  max-width: min(60ch, 90vw);
+  overflow-wrap: break-word;
 }
 
 figcaption {
   font-family: var(--sans);
-  font-size: clamp(0.9rem, 25vw, 1.2rem);
+  font-size: clamp(0.875rem, 0.77rem + 0.46vw, 1.2rem);
   color: #ffffff;
   text-shadow: 0 4px 4px #08060d;
   margin-top: 10px;
