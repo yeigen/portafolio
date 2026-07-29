@@ -7,7 +7,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <h2 className='Yeigen'> <a href="/">YEIGEN</a></h2>
+                <h2 className='Yeigen'> <a href="/portafolio">YEIGEN</a></h2>
                 <button className='hamburger'
                 aria-expanded={isMenuOpen}
                 aria-controls="main-nav-menu"
