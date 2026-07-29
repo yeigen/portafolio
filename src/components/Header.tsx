@@ -18,7 +18,7 @@ function Header() {
                 </button>
                 <div id="main-nav-menu" className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
                     <ul className="nav-links">
-                        <li> <a href="/">Inicio</a></li>
+                        <li> <a href="/portafolio">Inicio</a></li>
                         <li> <a href="#experiencia">Experiencia</a></li>
                         <li> <a href="#contacto">Contacto</a></li>
                     </ul>
