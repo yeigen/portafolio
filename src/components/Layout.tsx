@@ -3,6 +3,7 @@ import Home from '../pages/Home'
 import Fotter from './Footer'
 import Tren from './Tren'
 
+
 function Layout() {
   return (
     <>
