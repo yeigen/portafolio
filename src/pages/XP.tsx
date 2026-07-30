@@ -1,6 +1,8 @@
 import Modal from '../components/Modal';
 import { experiencias, type Experiencia } from '../experiencias';
+import yoGraduacion from '../assets/yo-graduacion-pequeno.png'
 import { useState } from 'react';
+import Line from '../components/LineSection'
 
 function Proyectos() {
 
@@ -8,7 +10,6 @@ function Proyectos() {
   
   return (
     <section id='experiencia' className="full-section">
-    <div>
       <h1 className="title">EXPERIENCIA</h1>
       <div className='xp-img'>
         {Object.entries(experiencias).map(([key,exp]) => (
@@ -25,7 +26,8 @@ function Proyectos() {
         foto={seleccion.foto} 
         onClose={() => setSeleccion(null)} 
       />}
-      </div>
+      <img className='yo-graduacion' src={yoGraduacion} alt="Yo Graduación" />
+      <Line/>
     </section>
   )
 }

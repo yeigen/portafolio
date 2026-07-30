@@ -1,6 +1,8 @@
 import yoImage from '../assets/yo-pixel-art.jpg'
+import Certificados from './Certificados'
 import Contacto from './Contacto'
 import Proyectos from './XP'
+import Line from '../components/LineSection'
 
 function Home() {
 
@@ -13,8 +15,10 @@ function Home() {
             <a href="https://www.linkedin.com/in/gabriel-eduardo-martinez-martinez-a12068267/" target="_blank" rel="noopener noreferrer"><img src={yoImage} alt="yo" /></a>
         </div>
             <p className='name'>YEIGEN</p>
+        <Line/>
         </section>
         <Proyectos/>
+        <Certificados/>
         <Contacto/>
     </div>
   )
