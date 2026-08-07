@@ -1,36 +1,75 @@
 import { useEffect, useState } from 'react'
 
-export function useMaquinaDeEscribir(texto: string, duracion = 2000) {
-  const [visible, setVisible] = useState('')
+type EstadoEscritura = {
+  texto: string
+  visible: string
+}
+
+export function useMaquinaDeEscribir(
+  texto: string, 
+  duracion = 2000,
+) {
+  
+  const [estado, setEstado] = useState<EstadoEscritura>({
+    texto: '',
+    visible: '',
+  })
+
+  const reducirMovimiento =
+  typeof window !== 'undefined' &&
+  window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
 
   useEffect(() => {
-    if (!texto) {
-      setVisible('')
+    if (!texto || reducirMovimiento || duracion <= 0) {
       return
     }
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(texto)
-      return
-    }
+  let frame = 0
+  let inicio: number | null = null
 
-    setVisible('')
+  const tick = (ahora: number) => {
+      if (inicio === null) {
+        inicio = ahora
+      }
 
-    let frame = 0
-    let inicio: number | null = null
+      const progreso = Math.min(
+        (ahora - inicio) / duracion,
+        1,
+      )
 
-    const tick = (ahora: number) => {
-      if (inicio === null) inicio = ahora
+      setEstado({
+        texto,
+        visible: texto.slice(
+          0,
+          Math.ceil(progreso * texto.length),
+        ),
+      })
 
-      const progreso = Math.min((ahora - inicio) / duracion, 1)
-      setVisible(texto.slice(0, Math.ceil(progreso * texto.length)))
-
-      if (progreso < 1) frame = requestAnimationFrame(tick)
+      if (progreso < 1) {
+        frame = requestAnimationFrame(tick)
+      }
     }
 
     frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [texto, duracion])
 
-  return visible
+    return () => {
+      cancelAnimationFrame(frame)
+    }
+  }, [texto, duracion, reducirMovimiento])
+
+  if (!texto) {
+    return ''
+  }
+
+  if (reducirMovimiento || duracion <= 0) {
+    return texto
+  }
+
+  if (estado.texto !== texto) {
+    return ''
+  }
+
+  return estado.visible
 }

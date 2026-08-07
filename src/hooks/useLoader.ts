@@ -1,37 +1,63 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
 export type Fase = 'cargando' | 'saliendo' | 'listo'
 
-export function useLoader(minimo = 2000, duracionSalida = 500) {
+export function useLoader(
+  minimo = 2000,
+  duracionSalida = 500,
+) {
   const [fase, setFase] = useState<Fase>('cargando')
 
   useEffect(() => {
-    let vivo = true
-    let idMinimo: ReturnType<typeof setTimeout>
-    let idSalida: ReturnType<typeof setTimeout>
+    let cancelado = false
 
-    const carga = new Promise<void>(resolve => {
-      if (document.readyState === 'complete') resolve()
-      else window.addEventListener('load', () => resolve(), { once: true })
+    let idMinimo: ReturnType<typeof setTimeout> | undefined
+    let idSalida: ReturnType<typeof setTimeout> | undefined
+
+    let resolverCarga: (() => void) | undefined
+
+    const carga = new Promise<void>((resolve) => {
+      if (document.readyState === 'complete') {
+        resolve()
+        return
+      }
+
+      resolverCarga = resolve
+      window.addEventListener('load', resolverCarga, {
+        once: true,
+      })
     })
 
-    const espera = new Promise<void>(resolve => {
+    const espera = new Promise<void>((resolve) => {
       idMinimo = setTimeout(resolve, minimo)
     })
 
     Promise.all([carga, espera]).then(() => {
-      if (!vivo) return
+      if (cancelado) return
 
       setFase('saliendo')
+
       idSalida = setTimeout(() => {
-        if (vivo) setFase('listo')
+        if (!cancelado) {
+          setFase('listo')
+        }
       }, duracionSalida)
     })
 
     return () => {
-      vivo = false
-      clearTimeout(idMinimo)
-      clearTimeout(idSalida)
+      cancelado = true
+
+      if (resolverCarga) {
+        window.removeEventListener('load', resolverCarga)
+      }
+
+      if (idMinimo !== undefined) {
+        clearTimeout(idMinimo)
+      }
+
+      if (idSalida !== undefined) {
+        clearTimeout(idSalida)
+      }
     }
   }, [minimo, duracionSalida])
 

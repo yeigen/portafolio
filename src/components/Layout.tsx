@@ -1,6 +1,6 @@
 import Header from '../components/Header'
 import Home from '../pages/Home'
-import Fotter from './Footer'
+import Footer from './Footer'
 import Tren from './Tren'
 
 
@@ -12,7 +12,7 @@ function Layout() {
         <Home />
       </main>
       <Tren/>
-      <Fotter/>
+      <Footer/>
     </>
   )
 }
