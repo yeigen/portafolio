@@ -182,9 +182,8 @@
   background: #fff;
   color: #000;
   border: none;
-  border-radius: 0%;
-  box-shadow: none;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  border-radius: 20px;
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
 }
 
 a {
@@ -243,7 +242,7 @@ a {
 }
 
 .grilla-certificados svg {
-  width: clamp(80px, 10vw, 180px);
+  width: clamp(40px, 20vw, 180px);
   height: auto;
 }
 
@@ -330,5 +329,14 @@ main {
 
   .xp-item figcaption {
     max-width: 260px;
+  }
+
+  @media (max-width: 600px) {
+  .grilla-certificados{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
   }
 }
