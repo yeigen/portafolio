@@ -1,7 +1,7 @@
 blockExoticSubdeps: true
 dangerouslyAllowAllBuilds: false
 lockfile: true
-minimumReleaseAge: 2880
+minimumReleaseAge: 1440
 minimumReleaseAgeIgnoreMissingTime: false
 minimumReleaseAgeStrict: true
 preferFrozenLockfile: true
@@ -9,4 +9,6 @@ strictDepBuilds: true
 strictStorePkgContentCheck: true
 trustLockfile: false
 trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver@6.3.1
 verifyStoreIntegrity: true
