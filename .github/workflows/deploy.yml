@@ -20,11 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+      - uses: pnpm/action/setup@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+          cache: pnpm
+      - run: pnpm install --fronzen-lockfile
+      - run: pnpm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
