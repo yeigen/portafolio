@@ -1,18 +1,5 @@
 import Line from '../components/LineSection'
-import { icons } from '../icons'
-
-const certificado = icons.certificado
-
-const certificados = [
-  { nombre: 'Certificado 1', url: '' },
-  { nombre: 'Certificado 2', url: '' },
-  { nombre: 'Certificado 3', url: '' },
-  { nombre: 'Certificado 4', url: '' },
-  { nombre: 'Certificado 5', url: '' },
-  { nombre: 'Certificado 6', url: '' },
-  { nombre: 'Certificado 7', url: '' },
-  { nombre: 'Certificado 8', url: '' },
-]
+import { certificados } from '../Certificados';
 
 function Certificados() {
 
@@ -21,25 +8,15 @@ function Certificados() {
         <h1 className="title">CERTIFICADOS</h1>
         <div className='section-body'>
           <div className='grilla-certificados'>
-            {'paths' in certificado && certificados.map(({ nombre, url }) => (
+            {certificados.map(({ foto, nombre, url }) => (
               <a
                 key={nombre}
-                href={url || undefined}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <figure className='certificado-item'>
-                  <svg
-                    viewBox={certificado.viewBox}
-                    fill={certificado.fill}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g transform={certificado.transform}>
-                      {certificado.paths.map((p, j) => (
-                        <path key={j} d={p.d} fill={p.fill} />
-                      ))}
-                    </g>
-                  </svg>
+                  {foto ? <img src={foto} alt={nombre} loading="lazy" width={300} height={150} /> : <div className="foto-certificado-item" />}
                   <figcaption>{nombre}</figcaption>
                 </figure>
               </a>

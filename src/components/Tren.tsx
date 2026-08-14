@@ -1,8 +1,8 @@
-import {icons} from '../icons'
+import {icons, type IconName} from '../icons'
 
 function Tren() {
 
-const TechIcons = [
+const TechIcons: { icon: IconName }[] = [
 		{icon:"python",},
 		{icon:"fastapi",},
 		{icon:"postgres",},

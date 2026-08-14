@@ -33,3 +33,25 @@
     justify-content: center;
     justify-items: center;
 }
+
+.background-logo {
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.icono-contacto {
+    width: 300px;
+    height: 290px;
+    transition: transform 0.3s;
+}
+
+.background-logo:hover {
+    transform: scale(1.1);
+}
