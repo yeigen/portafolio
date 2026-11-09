@@ -1,5 +1,6 @@
 import './css/Loader.css'
 import type { Fase } from '../hooks/useLoader'
+import astronauta from '../assets/cyber/astronauta.webp'
 
 type LoaderProps = {
   fase: Fase
@@ -12,19 +13,8 @@ function Loader({ fase }: LoaderProps) {
       role='status'
       aria-live='polite'
     >
+      <img className='loader-astronauta' src={astronauta} alt='' />
       <span className='loader-texto'>Cargando</span>
-
-      <div data-js='astro' className='astronaut' aria-hidden='true'>
-        <div className='head'></div>
-        <div className='arm arm-left'></div>
-        <div className='arm arm-right'></div>
-        <div className='body'>
-          <div className='panel'></div>
-        </div>
-        <div className='leg leg-left'></div>
-        <div className='leg leg-right'></div>
-        <div className='schoolbag'></div>
-      </div>
     </div>
   );
 }

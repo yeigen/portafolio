@@ -1,57 +1,40 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 
 .social-icons svg,
 .social-icons img {
-    width:  1.8rem;
-    height: 1.8rem;
-    transition: transform 0.3s;
-    vertical-align: middle;
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6));
+  transition: all 200ms ease-out;
 }
 
-.tech-icons svg{
-    width:  clamp(1.8rem, 4vw, 3rem);
-    height: 3rem;
+.social-icons svg path {
+  fill: var(--electric-cyan-tribal);
 }
 
-.tech-icons svg:hover,
 .social-icons svg:hover,
 .social-icons img:hover {
-    transform: scale(1.2);
-
+  transform: scale(1.2);
 }
 
-.tech-icons
-{
-    gap: 15px;
-    display: flex;
-    padding: 8px;
-    
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  padding: 8px;
 }
 
-.social-icons{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    justify-items: center;
+.tech-icons svg {
+  width: clamp(1.8rem, 4vw, 3rem);
+  height: 3rem;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
+  transition: all 200ms ease-out;
 }
 
-.background-logo {
-    background-color: #fff;
-    width: 400px;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: transform 0.3s;
-    display: flex;
-    margin-bottom: 50px;
-}
-
-.icono-contacto {
-    width: 300px;
-    height: 290px;
-    transition: transform 0.3s;
-}
-
-.background-logo:hover {
-    transform: scale(1.1);
+.tech-icons svg:hover {
+  transform: scale(1.2);
 }

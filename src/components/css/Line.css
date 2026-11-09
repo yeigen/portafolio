@@ -1,16 +1,7 @@
 .linea-horizontal {
-    width: 98.5vw;
-    height: 10px;
-    box-shadow: 0 4px 4px #b83be649;
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    background: rgba(80, 5, 5, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 10px;
-    padding: 2px;
-}
-
-#experiencia .linea-horizontal {
-      position: relative;
-      top: -20px;
+  width: 100%;
+  height: 1px;
+  margin-top: var(--espacio-seccion);
+  background: linear-gradient(90deg, transparent, var(--electric-cyan-tribal), var(--neon-magenta-tribal), transparent);
+  box-shadow: var(--glow);
 }
