@@ -163,6 +163,63 @@
   transform: translateZ(100px);
 }
 
+.xp-grid {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-areas:
+    'abodi uao'
+    'abodi indigo';
+  gap: 1.5rem;
+}
+
+.xp-abodi {
+  grid-area: abodi;
+}
+
+.xp-uao {
+  grid-area: uao;
+}
+
+.xp-indigo {
+  grid-area: indigo;
+}
+
+.xp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--electric-cyan-tribal);
+  font: inherit;
+  transition: all 200ms ease-out;
+}
+
+.xp-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.xp-img {
+  flex: 1;
+  width: 100%;
+  min-height: 140px;
+  max-height: 260px;
+  padding: 1rem;
+  object-fit: contain;
+}
+
+.xp-abodi .xp-img {
+  max-height: none;
+}
+
+.xp-caption {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
 .tren {
   display: flex;
   justify-content: center;
@@ -180,6 +237,109 @@
   width: max-content;
   gap: 15px;
   animation: tren-scroll 8s linear infinite;
+}
+
+.modal-box {
+  width: min(92vw, 820px);
+  max-height: 90dvh;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: var(--radio);
+  background-color: #000000;
+  background-image: url('./assets/cyber/tribal-pattern.svg');
+  background-blend-mode: overlay;
+  box-shadow: var(--glow);
+  color: var(--texto);
+  text-align: left;
+}
+
+.modal-box[open] {
+  animation: entrada 300ms ease-out;
+}
+
+.modal-box::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+html:has(dialog[open]) *:not(dialog, dialog *) {
+  animation-play-state: paused !important;
+}
+
+.modal-interior {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3.5rem 1.5rem 1.5rem;
+}
+
+.modal-cuerpo {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.modal-interior h2 {
+  padding-right: 3rem;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: var(--radio);
+  background: transparent;
+  color: var(--electric-cyan-tribal);
+  transition: all 200ms ease-out;
+}
+
+.modal-cerrar:hover {
+  background: rgba(0, 255, 255, 0.12);
+  box-shadow: var(--glow);
+}
+
+.modal-cerrar svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.modal-foto {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.modal-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.escritura {
+  display: grid;
+}
+
+.escritura > div {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.escritura-fantasma {
+  visibility: hidden;
+}
+
+.modal-texto {
+  margin: 0;
+  max-width: none;
 }
 
 @supports (animation-timeline: view()) {
@@ -210,6 +370,21 @@
   }
 }
 
+@media (min-width: 768px) {
+  .modal-interior {
+    padding: 2rem;
+  }
+
+  .modal-cuerpo {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  .modal-cerrar {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
 @media (max-width: 767px) {
   .hero {
     grid-template-columns: 1fr;
@@ -224,5 +399,13 @@
 
   .acciones {
     justify-content: center;
+  }
+
+  .xp-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'abodi'
+      'uao'
+      'indigo';
   }
 }
