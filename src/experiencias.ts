@@ -2,7 +2,6 @@ import Abodi from './assets/experiencia/abodi.png'
 import UAO from './assets/experiencia/logo-uao.png'
 import Indigo from './assets/experiencia/indigo-logo.jpeg'
 import AbodiPixel from './assets/abodi-pixel.jpg'
-import YoGraduacion from './assets/yo-graduacion-pequeno.png'
 import IndigoPixel from './assets/indigo-pixel.jpg'
 
 
@@ -32,7 +31,7 @@ export const experiencias: Record<string, Experiencia> = {
     },
     UAO: {
         img: UAO,
-        foto: YoGraduacion,
+        foto: UAO,
         alt: "UAO",
         caption: "Monitor de Redes e Infraestructura",
         titulo: "MONITOR DE REDES",
