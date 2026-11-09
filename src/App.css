@@ -220,6 +220,61 @@
   letter-spacing: 0.08em;
 }
 
+.grilla-certificados {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1.5rem;
+}
+
+.certificado-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  color: var(--electric-cyan-tribal);
+  font: inherit;
+  transition: all 200ms ease-out;
+}
+
+.certificado-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.certificado-emisor {
+  color: var(--neon-magenta-tribal);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--neon-magenta-tribal);
+}
+
+.certificado-nombre {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.certificado-detalle {
+  color: var(--texto);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.certificado-ver {
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: var(--radio);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .tren {
   display: flex;
   justify-content: center;
@@ -279,8 +334,24 @@ html:has(dialog[open]) *:not(dialog, dialog *) {
   gap: 1.5rem;
 }
 
+.modal-ancho {
+  width: min(95vw, 1000px);
+}
+
 .modal-interior h2 {
   padding-right: 3rem;
+}
+
+.visor-titulo {
+  font-size: clamp(1.125rem, 1rem + 1vw, 1.5rem);
+}
+
+.visor-pdf {
+  width: 100%;
+  height: min(65dvh, 720px);
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: var(--radio);
+  background: #ffffff;
 }
 
 .modal-cerrar {
@@ -382,6 +453,17 @@ html:has(dialog[open]) *:not(dialog, dialog *) {
   .modal-cerrar {
     top: 1rem;
     right: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .grilla-certificados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .certificado-item:nth-child(3n + 1),
+  .certificado-item:last-child:nth-child(3n + 2) {
+    grid-column: span 2;
   }
 }
 
