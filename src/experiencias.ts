@@ -13,6 +13,7 @@ export interface Experiencia {
     caption: string
     titulo: string
     texto: string
+    enlace?: string
 }
 
 export const experiencias: Record<string, Experiencia> = {
@@ -27,6 +28,7 @@ export const experiencias: Record<string, Experiencia> = {
 
         Me toco pasar por el diseño, el frontend y el despliegue, asi que fue la primera vez que llevé
         un proyecto completo de principio a fin y no solo una parte suelta.`,
+        enlace: "https://abodiapp.com",
     },
     UAO: {
         img: UAO,

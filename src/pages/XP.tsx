@@ -27,6 +27,7 @@ function Proyectos() {
           titulo={seleccion.titulo}
           texto={seleccion.texto}
           foto={seleccion.foto}
+          enlace={seleccion.enlace}
           onClose={() => setSeleccion(null)}
         />
       )}

@@ -6,6 +6,7 @@ interface ModalProps {
   titulo: string
   texto: string
   foto: string
+  enlace?: string
 }
 
 const parrafos = (t: string) =>
@@ -13,7 +14,7 @@ const parrafos = (t: string) =>
     <p className="modal-texto" key={i}>{p}</p>
   ))
 
-function Modal({ onClose, titulo, texto, foto }: ModalProps) {
+function Modal({ onClose, titulo, texto, foto, enlace }: ModalProps) {
   const textoVisible = useMaquinaDeEscribir(texto, 2000)
 
   return (
@@ -26,6 +27,11 @@ function Modal({ onClose, titulo, texto, foto }: ModalProps) {
             <div className="escritura-fantasma" aria-hidden="true">{parrafos(texto)}</div>
             <div>{parrafos(textoVisible)}</div>
           </div>
+          {enlace && (
+            <a className="boton" href={enlace} target="_blank" rel="noopener noreferrer">
+              Visitar {new URL(enlace).host}
+            </a>
+          )}
         </div>
       </div>
     </Dialogo>
