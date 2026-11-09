@@ -22,11 +22,9 @@ export const experiencias: Record<string, Experiencia> = {
         alt: "Abodi-Proyecto",
         caption: "Proyecto ABODI",
         titulo: "ABODI",
-        texto: `ABODI es el proyecto donde termina aterrizando todo lo que estudio. Empezo como una idea pequeña y
-        se convirtio en el lugar donde pruebo cada cosa nueva que aprendo.
+        texto: `ABODI es un proyecto real: tiene clientes, está desplegado y funciona las 24 horas, todos los días.
 
-        Me toco pasar por el diseño, el frontend y el despliegue, asi que fue la primera vez que llevé
-        un proyecto completo de principio a fin y no solo una parte suelta.`,
+        Me encargué del recorrido completo, desde el diseño y el frontend hasta el despliegue. Es el primer proyecto que llevo de principio a fin, y hoy está en producción.`,
         enlace: "https://abodiapp.com",
     },
     UAO: {
