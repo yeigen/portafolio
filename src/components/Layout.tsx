@@ -8,7 +8,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <main className='center'>
+      <main>
         <Home />
       </main>
       <Tren/>

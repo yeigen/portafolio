@@ -1,119 +1,138 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    align-items: center;
-
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-
-    box-shadow: 0 8px 30px #b700ff;
-
-    padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--electric-cyan-tribal);
+  box-shadow: var(--glow);
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1126px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
 }
 
-nav li{
-    font-size: clamp(1rem, 0.92rem + 0.37vw, 1.25rem);
+.logo {
+  font-size: clamp(1.125rem, 0.9rem + 1vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--electric-cyan-tribal);
+  animation: pulse-glow var(--glow-pulse-duration) infinite alternate;
+  transition: all 200ms ease-out;
 }
 
-.Yeigen {
-    margin: 0;
-    font-size: clamp(1.125rem, 0.875rem + 1.11vw, 1.875rem);
-    transition: transform 0.3s;
+.logo:hover {
+  transform: scale(1.03);
 }
 
-
-.Yeigen:hover {
-    color: #b700ff;
-    text-shadow: 0 0 15px #b700ff;
-    transform: scale(1.2);
-
+.nav-menu-interior {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links {
-    font-family: "Zen Dots";
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav .nav-links {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  color: #aa3bff;
-  font-family: var(--sans);
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s;
   display: inline-block;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 200ms ease-out;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 15px #b700ff;
-    transform: scale(1.2);
+  border-color: var(--neon-magenta-tribal);
+  text-shadow: 0 0 10px var(--neon-magenta-tribal);
 }
 
 .hamburger {
-    display: none;
-    border: none;
-    background: none;
+  display: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: var(--radio);
+  background: transparent;
+  color: var(--electric-cyan-tribal);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 200ms ease-out;
 }
 
-.hamburger span {
-    display: block;
-    height: 10px;
-    background: linear-gradient(0deg, #7a5af8, #7a5af8);;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border: none;
-    padding: 10px 10px;
-    font-family: var(--sans);
-    text-shadow: 0 4px 4px #000000;
-    border-radius: 10%;
-    justify-content: center;
-    cursor: pointer;
+.hamburger:hover,
+.hamburger[aria-expanded='true'] {
+  background: rgba(0, 255, 255, 0.12);
+  box-shadow: var(--glow);
 }
 
-.hamburger[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(12.5px) rotate(45deg);
+.pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--electric-cyan-tribal);
+  box-shadow: var(--glow);
+  background: rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width: 680px) {
+.pie .copy {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 1023px) {
   .hamburger {
-    display: flex;
+    display: block;
   }
 
   .nav-menu {
     display: grid;
     grid-template-rows: 0fr;
-    overflow: hidden;
-    transition: grid-template-rows 0.3s ease;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.97);
+    border-bottom: 1px solid var(--electric-cyan-tribal);
+    transition: grid-template-rows 300ms ease, visibility 300ms;
   }
 
   .nav-menu.open {
     grid-template-rows: 1fr;
+    visibility: visible;
   }
 
-  .nav-menu ul {
+  .nav-menu-interior {
     flex-direction: column;
+    gap: 0;
+    min-height: 0;
     overflow: hidden;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .nav-menu-interior .social-icons {
+    padding-block: 1.5rem;
   }
 }
