@@ -10,9 +10,10 @@ function Icon({ name, className }: IconProps) {
 	const icon = icons[name]
 
 	return 'url' in icon ? (
-		<img src={icon.url} alt={name} className={className} />
+		<img src={icon.url} alt="" className={className} />
 	) : (
 		<svg
+			aria-hidden="true"
 			viewBox={icon.viewBox}
 			fill={icon.fill}
 			className={className}
