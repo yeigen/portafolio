@@ -291,6 +291,57 @@
   text-transform: uppercase;
 }
 
+.contacto-cuerpo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contacto-redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.5rem, 3vw, 1.5rem);
+}
+
+.contacto-logo {
+  display: grid;
+  place-items: center;
+  width: clamp(72px, 24vw, 200px);
+  aspect-ratio: 1;
+  border: 1px solid var(--electric-cyan-tribal);
+  border-radius: 50%;
+  background: #000000;
+  box-shadow: var(--glow);
+  transition: all 200ms ease-out;
+}
+
+.contacto-logo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.icono-contacto {
+  width: 55%;
+  height: 55%;
+}
+
+.icono-contacto path {
+  fill: var(--electric-cyan-tribal);
+}
+
+.correo {
+  font-size: clamp(0.75rem, 0.6rem + 0.8vw, 1.125rem);
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
+.contacto-gif {
+  width: clamp(90px, 14vw, 150px);
+}
+
 .tren {
   display: flex;
   justify-content: center;
