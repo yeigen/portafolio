@@ -33,10 +33,10 @@ export const experiencias: Record<string, Experiencia> = {
         alt: "UAO",
         caption: "Monitor de Redes e Infraestructura",
         titulo: "MONITOR DE REDES",
-        texto: `Como monitor de redes e infraestructura acompañé la operacion del dia a dia: revisar equipos,
+        texto: `Como monitor de redes e infraestructura acompañé la operación del día a día: revisar equipos,
         atender reportes y dejar documentado lo que iba pasando.
 
-        Fue el trabajo que me enseño que la infraestructura casi nunca falla de forma obvia, y que
+        Fue el trabajo que me enseñó que la infraestructura casi nunca falla de forma obvia, y que
         documentar bien termina valiendo tanto como arreglar el problema.`,
     },
     Indigo: {
@@ -46,9 +46,9 @@ export const experiencias: Record<string, Experiencia> = {
         caption: "Junior Developer L1",
         titulo: "JUNIOR DEVELOPER",
         texto: `Mi primer rol formal como desarrollador. Entré a Junior Developer de nivel 1, atendiendo
-        incidencias y haciendo ajustes sobre codigo que no habia escrito yo.
+        incidencias y haciendo ajustes sobre código que no había escrito yo.
 
-        Aprendi a leer proyectos ajenos, a preguntar antes de tocar, y a que un cambio pequeño y
-        entendido vale mas que uno grande y apurado.`
+        Aprendí a leer proyectos ajenos, a preguntar antes de tocar, y a que un cambio pequeño y
+        entendido vale más que uno grande y apurado.`
 }
 }
