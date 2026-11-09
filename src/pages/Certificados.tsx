@@ -29,7 +29,7 @@ function Certificados() {
         ))}
       </div>
       {abierto && (
-        <VisorPdf nombre={abierto.nombre} url={abierto.url} onClose={() => setAbierto(null)} />
+        <VisorPdf nombre={abierto.nombre} url={abierto.url} verificacion={abierto.verificacion} onClose={() => setAbierto(null)} />
       )}
       <Line />
     </section>

@@ -346,6 +346,17 @@ html:has(dialog[open]) *:not(dialog, dialog *) {
   font-size: clamp(1.125rem, 1rem + 1vw, 1.5rem);
 }
 
+.visor-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.visor-acciones .boton {
+  flex: 1;
+  text-align: center;
+}
+
 .visor-pdf {
   width: 100%;
   height: min(65dvh, 720px);

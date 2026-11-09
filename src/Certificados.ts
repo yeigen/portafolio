@@ -5,6 +5,7 @@ type Certificado = {
   emisor: string
   detalle: string
   url: string
+  verificacion?: string
 }
 
 export const certificados: Certificado[] = [
@@ -25,6 +26,7 @@ export const certificados: Certificado[] = [
     emisor: 'midudev',
     detalle: 'Curso completo',
     url: `${base}certificados/python-desde-cero.pdf`,
+    verificacion: 'https://certificados.midudev.com/6b328504-03c6-4523-8ba8-ce9ad7868515.pdf',
   },
   {
     nombre: 'Visualización con Seaborn',
