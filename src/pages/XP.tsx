@@ -2,6 +2,7 @@ import Modal from '../components/Modal'
 import { experiencias, type Experiencia } from '../experiencias'
 import { useState } from 'react'
 import Line from '../components/LineSection'
+import colgado from '../assets/cyber/colgado.webp'
 
 function Proyectos() {
   const [seleccion, setSeleccion] = useState<Experiencia | null>(null)
@@ -22,6 +23,7 @@ function Proyectos() {
           </button>
         ))}
       </div>
+      <img className="decorativo colgado" src={colgado} alt="" loading="lazy" />
       {seleccion && (
         <Modal
           titulo={seleccion.titulo}

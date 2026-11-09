@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Line from '../components/LineSection'
 import VisorPdf from '../components/VisorPdf'
 import { certificados } from '../Certificados'
+import gwen from '../assets/cyber/gwen.webp'
 
 function Certificados() {
   const [abierto, setAbierto] = useState<(typeof certificados)[number] | null>(null)
@@ -30,6 +31,7 @@ function Certificados() {
       {abierto && (
         <VisorPdf nombre={abierto.nombre} url={abierto.url} verificacion={abierto.verificacion} onClose={() => setAbierto(null)} />
       )}
+      <img className="decorativo gwen" src={gwen} alt="" loading="lazy" />
       <Line />
     </section>
   )
