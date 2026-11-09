@@ -243,6 +243,22 @@
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
 }
 
+.certificado-logo {
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radio);
+}
+
+.certificado-logo img {
+  display: block;
+  height: var(--alto, 2.5rem);
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+}
+
 .certificado-emisor {
   color: var(--neon-magenta-tribal);
   font-size: 0.75rem;

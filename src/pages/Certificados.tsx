@@ -17,10 +17,9 @@ function Certificados() {
             className="certificado-item tarjeta revelar"
             onClick={() => setAbierto(certificado)}
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="12" cy="9" r="6" />
-              <path d="m8.5 14-1.5 8 5-3 5 3-1.5-8" />
-            </svg>
+            <span className="certificado-logo" style={{ background: certificado.logoFondo, '--alto': certificado.logoAlto } as React.CSSProperties}>
+              <img src={certificado.logo} alt="" loading="lazy" />
+            </span>
             <span className="certificado-emisor">{certificado.emisor}</span>
             <span className="certificado-nombre">{certificado.nombre}</span>
             <span className="certificado-detalle">{certificado.detalle}</span>
