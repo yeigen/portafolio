@@ -44,4 +44,10 @@ export const certificados: Certificado[] = [
     detalle: '22 jun 2025 · 4 h',
     url: `${base}certificados/muestreo-en-python.pdf`,
   },
+  {
+    nombre: 'Monitor de Redes e Infraestructura',
+    emisor: 'UAO',
+    detalle: 'Período 2025-1S',
+    url: `${base}certificados/redes-infraestructura.pdf`,
+  },
 ]
