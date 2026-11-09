@@ -63,15 +63,6 @@ export const certificados: Certificado[] = [
     url: `${base}certificados/analisis-exploratorio.pdf`,
   },
   {
-    nombre: 'Muestreo en Python',
-    emisor: 'DataCamp',
-    logo: datacamp,
-    logoFondo: '#ffffff',
-    logoAlto: '2.5rem',
-    detalle: '22 jun 2025 · 4 h',
-    url: `${base}certificados/muestreo-en-python.pdf`,
-  },
-  {
     nombre: 'Monitor de Redes e Infraestructura',
     emisor: 'UAO',
     logo: uao,
